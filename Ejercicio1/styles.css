@@ -1,0 +1,74 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Párrafo principal */
+body > p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Span para votos */
+span {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Contenedor general de opciones */
+.opciones {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Cada bloque de botón + contador */
+.opcion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opcion p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
