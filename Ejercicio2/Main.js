@@ -21,8 +21,6 @@ function formatearCOP(valor) {
   }).format(valor);
 }
 
-
-
 document.getElementById("casco").addEventListener("click", function(){
     // contadorCasco += 1;
     contadorCasco = parseInt(document.getElementById("cantidadCascos").value);
@@ -41,6 +39,7 @@ document.getElementById("monotraje").addEventListener("click", function(){
     total = totalCasco + totalGuantes + totalMonotraje 
     document.getElementById("total").innerHTML = formatearCOP(total);
 })
+
 document.getElementById("guantes").addEventListener("click", function(){
     // contadorGuantes += 1;
     contadorGuantes = parseInt(document.getElementById("cantidadGuantes").value);
@@ -49,5 +48,23 @@ document.getElementById("guantes").addEventListener("click", function(){
     total = totalCasco + totalGuantes + totalMonotraje 
     document.getElementById("total").innerHTML = formatearCOP(total);
 })
+
+document.getElementById("vaciar").addEventListener("click", function(){
+    const confirmar = confirm("¿Estás seguro de que quieres vaciar el carrito? 🛒\nTodos los productos serán eliminados.");
+    if (confirmar) {
+        alert("Carrito vaciado con éxito. 😢\n¡Esperamos verte pronto y ayudarte a rodar con seguridad!");
+        location.reload();
+    // Aquí puedes poner la lógica para vaciar el carrito
+  }
+})
+
+document.getElementById("comprar").addEventListener("click", function(){
+    location.reload();
+    alert("¡Gracias por tu compra! 🛍️" +
+        "\nRecuerda que la seguridad nunca está de más. 🏍️💨" + 
+        "\nUsar casco, monotraje y guantes puede salvarte la vida." + 
+        "\n¡Conduce con responsabilidad! ✅")
+})
+
 
 

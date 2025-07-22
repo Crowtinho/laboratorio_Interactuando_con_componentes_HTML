@@ -55,7 +55,7 @@ tbody tr:last-child td {
 /* Botón */
 button {
   padding: 8px 16px;
-  background-color: #27ae60;
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 6px;
@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-  background-color: #219150;
+  background-color: rgb(31, 78, 132);
 }
 
 /* Inputs */
@@ -88,3 +88,27 @@ p {
   font-weight: bold;
   color: #e67e22;
 }
+
+.botones-finales {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre botones */
+  margin-top: 10px;
+}
+
+#vaciar {
+  background-color: #e74c3c; 
+}
+
+#vaciar:hover {
+  background-color: #c0392b;
+}
+#comprar {
+  background-color: #3ce764; 
+}
+
+#comprar:hover {
+  background-color: #2f693d;
+}
+
+
