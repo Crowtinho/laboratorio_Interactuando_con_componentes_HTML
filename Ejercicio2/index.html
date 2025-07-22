@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
 </head>
 <body>
     <h1>Carrito de compras</h1>
@@ -13,41 +13,39 @@
                 <tr>
                     <th>Producto</th>
                     <th>Precio</th>
-                    <th>Agregar</th>
-                    <th>Total Item</th>
                     <th>Cantidad Items</th>
+                    <th>Total Item</th>
+                    <th>Agregar</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Casco Deportivo</td>
                     <td>$1`250.000</td>
-                    <td><button id="casco">Agregar</button></td>
+                    <td><input type="number" id="cantidadCascos" min="0" value="0"></td>
                     <td>$<span id="totalCasco">0</span></td>
-                    <td id="cantidadCascos">0</td>
+                    <td><button id="casco">Agregar</button></td>
                 </tr>
                 <tr>
                     <td>Monotraje</td>
                     <td>$2`350.000</td>
-                    <td><button id="monotraje">Agregar</button></td>
+                    <td><input type="number" id="cantidadMonotrajes" min="0" value="0"></td>
                     <td>$<span id="totalMonotraje">0</span></td>
-                    <td id="cantidadMonotrajes">0</td>
+                    <td><button id="monotraje">Agregar</button></td>
                 </tr>
                 <tr>
                     <td>Guantes</td>
                     <td>$750.000</td>
-                    <td><button id="guantes">Agregar</button></td>
+                    <td><input type="number" id="cantidadGuantes" min="0" value="0"></td>
                     <td>$<span id="totalGuantes">0</span></td>
-                    <td id="cantidadGuantes">0</td>
+                    <td><button id="guantes">Agregar</button></td>
                 </tr>
 
             </tbody>
-            <tfoot>
-                <tr>
-                    <td>total a pagar: $<span id="total">0</span></td>
-                </tr>
-            </tfoot>
         </table>
+        <div>
+            <p>total a pagar: $<span id="total">0</span></p>
+        </div>
 
     </div>
     <script src="Main.js"></script>
