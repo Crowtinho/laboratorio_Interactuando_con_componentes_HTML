@@ -24,6 +24,11 @@ function formatearCOP(valor) {
 document.getElementById("casco").addEventListener("click", function(){
     // contadorCasco += 1;
     contadorCasco = parseInt(document.getElementById("cantidadCascos").value);
+     if(contadorCasco === ""|| isNaN(contadorCasco)){
+      contadorCasco = 0;
+      alert("Dato no válido en la cantidad de items 🚫");
+       location.reload();
+    }
     console.log(contadorCasco);
     document.getElementById("totalCasco").innerHTML = formatearCOP(precioCasco * contadorCasco);
     totalCasco = precioCasco * contadorCasco;
@@ -34,6 +39,11 @@ document.getElementById("casco").addEventListener("click", function(){
 document.getElementById("monotraje").addEventListener("click", function(){
     // contadorMonotraje += 1;
     contadorMonotraje = parseInt(document.getElementById("cantidadMonotrajes").value);
+    if(contadorMonotraje === ""|| isNaN(contadorMonotraje)){
+      contadorMonotraje = 0;
+      alert("Dato no válido en la cantidad de items 🚫");
+       location.reload();
+    }
     document.getElementById("totalMonotraje").innerHTML = formatearCOP(precioMonotraje * contadorMonotraje);
     totalMonotraje = precioMonotraje * contadorMonotraje
     total = totalCasco + totalGuantes + totalMonotraje 
@@ -43,6 +53,11 @@ document.getElementById("monotraje").addEventListener("click", function(){
 document.getElementById("guantes").addEventListener("click", function(){
     // contadorGuantes += 1;
     contadorGuantes = parseInt(document.getElementById("cantidadGuantes").value);
+       if(contadorGuantes === ""|| isNaN(contadorGuantes)){
+      contadorGuantes = 0;
+      alert("Dato no válido en la cantidad de items 🚫");
+       location.reload();
+    }
     document.getElementById("totalGuantes").innerHTML = formatearCOP(precioGuantes * contadorGuantes);
     totalGuantes = precioGuantes * contadorGuantes
     total = totalCasco + totalGuantes + totalMonotraje 
