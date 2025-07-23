@@ -52,26 +52,69 @@ document.getElementById("guantes").addEventListener("click", function(){
 document.getElementById("vaciar").addEventListener("click", function(){
   let contaTotal = contadorCasco + contadorGuantes + contadorMonotraje;
   if (contaTotal == 0){
-    alert("El carrito está vacio 🚫!!!")  
+
+    Swal.fire({
+      title: '¡No hay nada en el carrito 🚫!',
+      // text: 'Recuerda que la seguridad nunca está de más. ¡Disfruta tu equipo de moto!',
+      imageUrl: 'https://i.pinimg.com/736x/ad/d6/71/add6713be17ca808bef9ce16da906031.jpg',
+      imageWidth: 200,
+      imageHeight: 200,
+      confirmButtonText: '¡volver!🤦‍♂️'
+    });
+
   }else{
-    const confirmar = confirm("¿Estás seguro de que quieres vaciar el carrito? 🛒\nTodos los productos serán eliminados.");
-    if (confirmar) {
-      alert("Carrito vaciado con éxito. 😢\n¡Esperamos verte pronto y ayudarte a rodar con seguridad!");
-      location.reload();
-    }
+    Swal.fire({
+          title: '¡Carrito vaciado con éxito!',
+          // text: 'Recuerda que la seguridad nunca está de más. ¡Disfruta tu equipo de moto!',
+          imageUrl: 'https://i.pinimg.com/474x/cf/73/e3/cf73e3ed2b9a3056702efcc2cb5868be.jpg',
+          imageWidth: 300,
+          imageHeight: 200,
+          confirmButtonText: '¡volver!😒'
+        }).then(() =>{
+          location.reload();
+        })
   }
+
+
+  // const confirmar = confirm("¿Estás seguro de que quieres vaciar el carrito? 🛒\nTodos los productos serán eliminados.");
+  // if (confirmar) {
+  //   alert("Carrito vaciado con éxito. 😢\n¡Esperamos verte pronto y ayudarte a rodar con seguridad!");
+  //   location.reload();
+  // }
 })
 
 document.getElementById("comprar").addEventListener("click", function(){
+
   if(total > 0){
-    location.reload();
-    alert("¡Gracias por tu compra! 🛍️" +
-        "\nRecuerda que la seguridad nunca está de más. 🏍️💨" + 
-        "\nUsar casco, monotraje y guantes puede salvarte la vida." + 
-        "\n¡Conduce con responsabilidad! ✅")
+    Swal.fire({
+      title: '¡Gracias por tu compra!',
+      text: 'Recuerda que la seguridad nunca está de más. ¡Disfruta tu equipo de moto!',
+      imageUrl: 'https://i.pinimg.com/564x/e1/4a/0a/e14a0a27d6a741261eb84e4829d93794.jpg',
+      imageWidth: 200,
+      imageHeight: 200,
+      confirmButtonText: '¡Genial! 🏍️'
+    }).then(() =>{
+      location.reload();
+    })
   }else{
-    alert("No has agregado nada al carrito ❌!!!")
+        Swal.fire({
+      title: '¡No hay nada en el carrito🚫!',
+      // text: 'Recuerda que la seguridad nunca está de más. ¡Disfruta tu equipo de moto!',
+      imageUrl: 'https://i.pinimg.com/736x/06/5e/54/065e54a424ab52c7b43aa3fdb92276c5.jpg',
+      imageWidth: 350,
+      imageHeight: 200,
+      confirmButtonText: '¡volver! 🛒'
+    })
   }
+
+      
+    // location.reload();
+    // alert("¡Gracias por tu compra! 🛍️" +
+    //     "\nRecuerda que la seguridad nunca está de más. 🏍️💨" + 
+    //     "\nUsar casco, monotraje y guantes puede salvarte la vida." + 
+    //     "\n¡Conduce con responsabilidad! ✅")
+    
+    
 });
 
 

@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabecera de la tabla */
+thead {
+  background-color: #3498db;
+  color: white;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+/* Fila final sin borde inferior */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Botón */
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(31, 78, 132);
+}
+
+/* Inputs */
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Total general */
+p {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#total {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.botones-finales {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre botones */
+  margin-top: 10px;
+}
+
+#vaciar {
+  background-color: #e74c3c; 
+}
+
+#vaciar:hover {
+  background-color: #c0392b;
+}
+#comprar {
+  background-color: #3ce764; 
+}
+
+#comprar:hover {
+  background-color: #2f693d;
+}
+
+
